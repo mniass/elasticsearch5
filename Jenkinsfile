@@ -2,7 +2,9 @@ pipeline {
     agent { dockerfile true }
     stages {
       stage('Build') {
-        sh 'echo build image ES'
+         steps {
+           sh 'echo build image ES'
+         }
       }
     } 
 }
