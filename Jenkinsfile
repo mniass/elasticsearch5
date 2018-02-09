@@ -1,9 +1,9 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
       stage('Build') {
          steps {
-           sh 'echo build image ES'
+           sh 'docker build -t elasticsearch:5.6.3 .'
          }
       }
     } 
