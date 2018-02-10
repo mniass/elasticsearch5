@@ -9,7 +9,7 @@ pipeline {
       stage('Push to registry') {
          steps {
            sh 'docker login -u mniass -p 17decembre'
-           sh 'docker tag es mniass/es
+           sh 'docker tag es:5.6.3 mniass/es:5.6.3
          }
       }
     } 
