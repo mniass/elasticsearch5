@@ -3,7 +3,12 @@ pipeline {
     stages {
       stage('Build') {
          steps {
-           sh 'docker build  .'
+           sh 'docker build -t es:5.6.3 .'
+         }
+      }
+      stage('Push to registry') {
+         steps {
+           sh 'docker login -u mniass -p 17decembre'
          }
       }
     } 
